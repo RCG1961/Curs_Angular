@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  header {
+    display:flex;
+    flex-direction:column;
+    width: 100%;
+    background-color:black;
+    padding: 20px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+    height: 200px;
+  }
+
+  header > div {
+    margin: 5px;
+  }
+
+  .cabeza1{
+    display:flex;
+    flex-direction:row;    
+    background-color: rgb(49, 40, 175);
+    height: 80px;
+  }
+  .cabeza1 > div{
+    margin: 10px;
+    background-color:#d41010; 
+  }
+
+  .cabeza2{
+    background-color: #10aa43; 
+    height: 80px;
+  }  
+
+  .cabeza2 > div{
+    margin: 15px;
+    background-color:rgb(16, 52, 213); 
+  } 
+
+  section {
+    display:flex;  
+    width: 100%;
+    background-color: black;
+    padding: 10px;
+    text-align: center;
+    font-size: 35px;
+    color: white; 
+    height: 365px; 
+    
+  }
+  section >nav{
+    margin: 10px;
+  }
+
+  section >article{
+    margin: 10px;
+  }
+
+  nav{
+    display:flex; 
+    flex-wrap:wrap; 
+    width: 70%;
+    background-color: rgb(62, 18, 145);
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+     
+  }
+  nav > div{
+    background-color: DodgerBlue;
+    color: white;
+    margin: 10px;
+    width:45%;   
+  }
+
+  .coloret{
+    background-color: #414950;
+  }
+
+  article{
+    display:flex; 
+    flex-wrap:wrap; 
+    flex-flow: column; 
+    width: 30%;
+    background-color: rgb(229, 243, 40);
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+  }
+
+  article > div{
+    background-color: rgb(190, 43, 117);
+    color: white;
+    margin: 10px;
+    width: 95%;
+    height: 25%;   
+  }
+
+  footer{
+    display:flex;
+    flex-direction:column;
+    width: 100%;
+    background-color: black;
+    padding: 15px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+  }
+
+  .cul{
+    display:flex; 
+    flex-wrap:wrap;
+    background-color: #10aa43; 
+    
+  }  
+
+  .cul > div{
+    margin: 30px;
+    background-color:rgb(16, 52, 213); 
+    width: 100%;
+  } 
+    /* Responsive para tablet */
+  @media only screen and (max-width: 1200px) {
+  
+    section {
+      flex-wrap:wrap;
+    }
+    nav{
+      width: 100%;
+    }
+    article{
+      width: 100%;
+    }
+  }
+    /* Responsive para mobil */
+    @media only screen and (max-width: 640px) {
+      header{
+        flex-direction: column;
+        flex-wrap: wrap;
+        flex-flow: column;
+      }
+     
+      .cabeza1{
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+      }
+    }
