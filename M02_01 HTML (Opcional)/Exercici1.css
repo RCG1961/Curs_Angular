@@ -133,7 +133,7 @@
 
     .boton2 {
       border: 3px solid hsl(29, 50%, 36%); /*anchura, estilo y color borde*/
-      padding: -100px; /*espacio alrededor texto*/
+      padding: 10px; /*espacio alrededor texto*/
       background-color: hsl(66, 96%, 55%); /*color botón*/
       color: black#ffffff; /*color texto*/
       text-decoration: none; /*decoración texto*/
