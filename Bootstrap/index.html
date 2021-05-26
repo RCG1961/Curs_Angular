@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Locate!me</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Desde CDN-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <!-- Librerias  descargadas al directrio js-->
+   <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+   <!-- Librerias propias de js  i css -->
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/mias.js"></script>
+ 
+</head>
+
+<body>
+
+
+  
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <table>
+      <tr><a class="navbar-brand" href="#"><img src="img/logo.svg" width="25px" height="25px" alt="Locate!me" ></a>
+      </tr>
+      <tr><span id="titulo" class="navbar-brand">Programa de Geolocalización Locate!me</span></tr>
+      </table>
+    </div>
+    <ul class="nav navbar-nav">
+
+      <li id="MyElement0" class="dropdown nav-item nav-link hide" ><a class="dropdown-toggle" data-toggle="dropdown" href="#">Contactos <span class="caret"></span></a>
+        <ul id="ThisElement0" class="dropdown-menu hide">
+          <li><a href="#">Importar</a></li>
+          <li><a href="#">Añadir</a></li>
+          <li><a href="#">Borrar</a></li>
+          <li><a href="#">Modificar</a></li>
+          <li><a href="#">Ver</a></li>
+        </ul>
+      </li>
+      
+      <li id="MyElement1" class="dropdown nav-item nav-link hide"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Grupos <span class="caret"></span></a>
+        <ul id="ThisElement1" class="dropdown-menu hide">
+          <li><a href="#">Crear</a></li>
+          <li><a href="#">Añadir</a></li>
+          <li><a href="#">Borrar</a></li>
+        </ul>
+      </li>
+
+      <li id="MyElement2" class="dropdown nav-item nav-link hide"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Eventos <span class="caret"></span></a>
+        <ul id="ThisElement2" class="dropdown-menu hide">
+          <li><a href="#">Calendario</a></li>
+          <li><a href="#">Aniversarios</a></li>
+          <li><a href="#">Fiestas</a></li>
+        </ul>
+      </li>
+      <li id="MyElement3" class="dropdown nav-item nav-link hide"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Chat <span class="caret"></span></a>
+        <ul id="ThisElement3" class="dropdown-menu hide">
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Quedar</a></li>
+          <li><a href="#">Enviar</a></li>
+        </ul>
+      </li>
+      <li id="MyElement4" class="dropdown nav-item nav-link hide"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Localización <span class="caret"></span></a>
+        <ul id="ThisElement4" class="dropdown-menu hide">
+          <li><a  href="#">Alarmas</a></li>
+          <li><a href="#">Itinerario</a></li>
+          <li><a href="#">Circuito</a></li>
+          <li><a href="#">Mapas</a></li>
+        </ul>
+      </li>
+      <li id="MyElement5" class="dropdown nav-item nav-link hide"><a class="dropdown-toggle " data-toggle="dropdown" href="#">Perfiles <span class="caret"></span></a>
+        <ul id="ThisElement5" class="dropdown-menu hide">
+          <li ><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</i></a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Tik-Tok</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Yotube</i></a></li>
+          <li><a href="#">Pinterest</a></li>
+          <li><a href="#">WeChat</a></li>
+        </ul>
+      </li>
+         <!--nav-item active-->
+    </ul>
+    
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#myModal" class="btn btn-light btn-lg" data-toggle="modal" data-target="#myModal3"><span class="glyphicon glyphicon-envelope"></span> Contacto</a></li>
+      <li><a href="#myModal" class="btn btn-light btn-lg" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a id="login" href="#myModal2" class="btn btn-light btn-lg" data-toggle="modal" data-target="#myModal2"><span class="glyphicon glyphicon-log-in" ></span> Login</a></li>
+      <li><a id="logout" href="#" class="btn btn-light btn-lg hide" data-toggle="modal" onclick="Cerrar()";><span class="glyphicon glyphicon-log-in" ></span> Logout</a></li>
+    </ul>
+    
+  </div>
+</nav>
+
+
+
+<div class="grid-block" style="background-image: url('img/fondo1.jpg'); width: 100%; height: 100%; ">
+ <br><br><br>
+  <div class="navbar navbar-light bg-light">
+     <form class="form-inline">
+      <input id="buscar" class="form-control mr-sm-2 hide" type="search" placeholder="Buscar (Grupo,contacto..)" aria-label="Search">
+      <button id="buscar2" class="btn btn-outline-success my-2 my-sm-0 hide" type="submit">Localizar</button>
+    </form>
+   </div>
+                                   <!--SLIDE de les fotos-->
+   <div class="container" >
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+     
+        <!-- Indicadors -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
+      </ol>
+  
+      <!-- Les fotos en slide -->
+      <div class="carousel-inner">
+  
+        <div class="item active">
+          <img src="img/uno.jpg" alt="Plano Callejero" >
+          <div class="carousel-caption">
+            <span><h4><font color="black">Geolocalización de la zona</font></h4></span>
+            </div>
+        </div>
+
+          
+        <div class="item">
+          <img src="img/dos.jpg" alt="Vista aerea">
+          <div class="carousel-caption">
+            <span><h4><font color="white">Vista aérea</font></h4></span>
+            </div>
+        </div>
+      
+        <div class="item">
+          <img src="img/tres.jpg" alt="Rutas alternativas" >
+          <div class="carousel-caption">
+            <span><h4><font color="red">Rutas alternativas</font></h4></span>
+            </div>
+        </div>
+
+        <div class="item">
+          <img src="img/cuatro.jpg" alt="Programari" >
+          <div class="carousel-caption">
+            <span><h4><font color="blue">Cibernarium Curs Angular</font></h4></span>
+            </div>
+        </div>
+        <div class="item">
+          <center><img src="img/logo.svg" alt="Logo" width="280px"></center>
+          <div class="carousel-caption">
+          </div>
+        </div>
+    
+      </div>
+  
+      <!-- Controles derecha e izquierda Carrusel-->
+      
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+
+  </div>
+
+  <!-- Modales -->
+
+  <div id="myModal" class="modal fade"  role="dialog">
+    <div class="modal-dialog"> 
+    
+      <!-- Modal content-->
+      <div id="myModal" class="modal-content ">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">ALTA DE USUARIO</h4>
+        </div>
+        <div class="modal-body">
+          <label for="contrasena1">Mail del usuario:</label><input type="mail" id="" class="form-control" placeholder="Pon un correo electronico válido">
+          <label for="contrasena1">Usuario/Nick:</label><input type="text" id="usuario" class="form-control" placeholder="Si lo dejas en blanco tu nick es tu correo electrónico">
+          <label for="contrasena1">Contraseña:</label><input type="password" id="pass1" class="form-control" placeholder="Password">
+          <label for="contrasena2">Repite Contraseña:</label><input type="password" id="pass2" class="form-control" placeholder="Repite Password">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-warning" data-dismiss="modal">Grabar</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <div id="myModal2" class="modal fade"  role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div id="myModal2" class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">ACTIVAR USUARIO</h4>
+        </div>
+        <div class="modal-body ">
+          <label for="contrasena">Contraseña</label><input type="password" id="contrasena" class="form-control" placeholder="Valida el usuario para poder habilitar los menus">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-info"  data-dismiss="modal" onclick="HabilitarMenu()";>Validar</button>           </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <div id="myModal3" class="modal fade"  role="dialog">
+    <div class="modal-dialog modal-sm">
+  <div id="myModal3" class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal">&times;</button>
+      <span>Para cualquier consulta dirigirse a:</span>
+      <h6 class="modal-title">cibernarium_angular@gmail.com</h6>
+    </div> 
+  </div>
+  
+</div>
+</div>
+
+   <!-- FIN DEL MODALES-->
+   </body>
+
+
+</html>

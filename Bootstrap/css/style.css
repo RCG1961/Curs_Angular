@@ -1,0 +1,110 @@
+ .html,body{
+    /* Para que funcione correctamente en Smartphones y Tablets */
+    height:100vh;
+    }        
+body {
+    /* Ruta relativa o completa a la imagen */
+    background-image: url(img/fondo2.jpg);
+    /* Centramos el fondo horizontal y verticalmente */
+    background-position: center center;
+    /* El fonde no se repite */
+    background-repeat: no-repeat;
+    /* Fijamos la imagen a la ventana para que no supere el alto de la ventana */
+    background-attachment: fixed;
+    /* El fonde se re-escala automáticamente */
+    background-size: cover;
+    /* Color de fondo si la imagen no se encuentra o mientras se está cargando */
+    background-color: #FFF;
+    /* Fuente para el texto */
+    text-align: center;
+    color: #000;
+    font-family: "Times New Roman", Times, serif;   
+}
+
+/* Background para ancho máximo de la pantalla física 767*/
+
+   
+
+  #myModal2 .modal-header,#myModal2 .modal-footer,#myModal2 .modal-body{
+     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;  
+     background-color: #0480be;
+     
+  }
+  
+  #myModal .modal-header,#myModal .modal-footer,#myModal .modal-body{
+     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+     background-color: hsl(335, 97%, 56%);
+     
+  }
+  #myModal3 .modal-header,#myModal3 .modal-footer,#myModal3 .modal-body{
+     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+     background-color: hsl(140, 83%, 25%);
+  }
+
+  /* For mobile phones: */
+
+
+/* Extra small devices (phones, 600px and down) */
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .carousel {
+    width: 120px;
+    height: 50px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .carousel {
+    width: 240px;
+    height: 100px;
+  }
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .carousel {
+    width: 240px;
+    height: 100px;
+  }
+  
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .carousel { 
+     margin-top: 140px; 
+     margin-left: 30px;
+     width: 480px;
+     height: 200px;
+  }  
+}
+
+  
+   .carousel {
+     margin-top: 140px; 
+     margin-left: 30px;
+     width: 480px;
+     height: 200px;
+   }
+
+   .carousel-control .glyphicon-chevron-right, .carousel-control .icon-next {
+     right: 10px;
+     top: 150px; 
+   }
+   
+   .carousel-control .glyphicon-chevron-left, .carousel-control .icon-prev {
+     left: 10px;
+     top: 150px;
+   }
+
+   .carousel-indicators{
+     top: 300px;
+}
+h4{
+  position: relative;
+  top:-230px;
+}
+
