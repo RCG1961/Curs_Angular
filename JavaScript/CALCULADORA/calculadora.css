@@ -1,0 +1,50 @@
+/*aspectos generales: bordes y color de fondo de calculadora*/ 
+.calculadora { border: 3px blue ridge; text-align: center;
+                display:block;
+                margin:0 auto;
+                padding:20px;
+                background-color:#2980b9;
+                width:200px;
+                height:430px;
+                border-radius: 25px;}
+
+/*pantalla de visualización: bordes, posición, color de fondo, estilo letra.*/ 					 
+#textoPantalla { width: 185px; border: 2px black solid; text-align: right; 
+                 position: relative; left: 0px;  padding: 0px 5px;
+                 background-color: white; font-family: "courier new";
+                 border-radius: 6px; 
+                 overflow: hidden;}
+
+/*botones normales: anchura y margen*/ 
+.calculadora [type=button] { width: 35px; padding: 0; border-radius: 6px; }
+/*botones especiales*/ 
+.calculadora input.largo { color: white; width: 75px;background-color: red; }
+.calculadora input.especial{
+    color: #ffffff;
+    background-color: #ba6618;
+    border-radius: 6px;
+    border: 2px solid #0016b0;
+  }
+  .calculadora input.funciones { color: rgb(39, 29, 131); width: 35px;background-color: yellow; }
+  .calculadora input.funcionesr { color: red; width: 35px;background-color: yellow; }
+  .calculadora input.funciones2 { color: white; width: 35px;background-color: rgb(141, 91, 151); }
+  .calculadora input.funciones3 { color: red; width: 35px;background-color: rgb(176, 116, 187); }
+  .calculadora input.opero { color:black; width: 35px;background-color: rgb(238, 238, 139); }
+ 
+  #modelo{
+   color: #1f0808;
+   font-family: Georgia;
+   font-size: 8px;
+}
+ 
+  #marca{
+   font-family:Lucida;
+   font-size: 10px;
+   color: #ffffff;
+   text-align: left;
+   font-style:italic;
+   font-style:bold;
+}
+
+
+.calculadora input.negro{ font-style:italic; font-weight: bold;  }
