@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--
+        Crea una funció anomenada calculadora que tingui com a entrada els següents paràmetres: operador, valor1 i valor2. 
+E      structura de la funció que faci sumes, restes i multiplicacions. El resultat haurà de ser mostrar per pantalla.
+	-->	
+			
+      <title> Exercici 9 NIVELL 2 </title>
+</head>
+<body onload="main();">
+      <script>
+        function calculadora(operacio,num1,num2)
+        {	
+          let resultat;
+          
+          switch (operacio){
+              case 'SUMA':
+              case  '+':
+                resultat = num1+num2; 
+                break;
+              case 'RESTA':
+              case '-':
+                resultat = num1-num2;
+                break;
+              case 'MULTIPLICACIO':
+              case '*':
+                resultat = num1*num2;
+                break;
+              case 'DIVISIO':
+              case '/':
+                 if(num2==0){
+                   resultat="Error en la divisó per 0"
+                 }
+                 else{
+                   resultat =num1/num2;
+                }
+                break;  
+              default:
+                 resultat='Error en alguno de los parametros'
+          }	
+          return resultat; 
+        }   
+           
+       function main(){
+        let op = window.prompt('Entra la operación que quieres realizar:\nSuma, resta,multiplica o divisio\nTambé pots  utilitzar el simbol (+,-,*,/)').toUpperCase();
+        let n1 = parseFloat(window.prompt('Entra el primer número: '));
+        let n2 = parseFloat(window.prompt('Entra el segundo número: '));
+        let mostar_resultado = calculadora(op,n1,n2);
+        window.alert(mostar_resultado);
+        }  
+
+
+      
+        </script>
+
+        
+</body>
+
+</html>   
