@@ -21,25 +21,35 @@ window.onload = function(){ //Acciones tras cargar la página
         xi=0 //el número está iniciado y podemos ampliarlo.
         }
 
-    function operar(s) {
-
+    function operar(s){
         if (ni != '0'){
             sl=ni+op+x;
-            x=eval(sl); 
+            x=eval(sl);
         }
         ni=x; //ponemos el 1� número en "numero en espera" para poder escribir el segundo.
         op=s; //guardamos tipo de operación.
         xi=1; //inicializar pantalla.
-        
-        }
+    }
 
     function igualar() {
         if (op=="no") { //no hay ninguna operación pendiente.
             pantalla.innerHTML=x;	//mostramos el mismo número	
             }
         else { //con operación pendiente resolvemos
-            sl=ni+op+x; // escribimos la operación en una cadena
-            sol=eval(sl) //convertimos la cadena a código y resolvemos
+            switch (op) {
+              case 'E': 
+                sol = Math.pow(ni,x); 
+                break;
+              case '%':
+                sol = x*(ni/100);   
+                break;  
+              case 'F':
+                sol =  Math.hypot(x,ni);
+              break;      
+              default: 
+              sl=ni+op+x; // escribimos la operación en una cadena
+              sol=eval(sl) //convertimos la cadena a código y resolvemos  
+            }          
             pantalla.innerHTML=sol //mostramos la solución
             x=sol; //guardamos la solución
             op="no"; //ya no hay operaciones pendientes
@@ -56,12 +66,7 @@ window.onload = function(){ //Acciones tras cargar la página
         xi=1; //se puede reiniciar la pantalla 
         }    
 
-    function porcent() { 
-        x=x/100 //dividir por 100 el número
-        pantalla.innerHTML=x; //mostrar en pantalla
-        igualar() //resolver y mostrar operaciones pendientes
-        xi=1 //reiniciar la pantalla
-        }
+    
 
     function opuest() { 
         nx=Number(x); //convertir en número
@@ -134,8 +139,77 @@ window.onload = function(){ //Acciones tras cargar la página
         }
 
         function radianes(){
-            deg = ParseInt(pantalla.innerHTML);
-            const gradosARadianes = deg => (deg * Math.PI) / 180.0;
-            alert(gradosARadianes);
+            x= (x*Math.PI)/180;
+            pantalla.innerHTML=x; //mostrar resultado en pantalla
+        }
+
+        function grados(){
+            x= (x*180)/Math.PI;
+            pantalla.innerHTML=x; //mostrar resultado en pantalla
+        }
+        function pi(){
+            x = Math.PI;
+            pantalla.innerHTML=x; //Constante Pi
+        }
+
+        function seno(){
+           x = Math.sin(x);
+           pantalla.innerHTML=x; //Seno
+
+        }
+        function coseno(){
+           x = Math.cos(x);
+           pantalla.innerHTML=x; //Coseno
+
         }
         
+        function tan(){
+          x = Math.tan(x); 
+          pantalla.innerHTML=x; //tangente
+
+        }
+        
+        function logaritmo(){
+           x = Math.log10(x);
+           pantalla.innerHTML=x; //logaritmo en base 10
+
+        }
+        
+        function lognep(){
+           x = Math.log(x);
+           pantalla.innerHTML=x; //logaritmo en base e
+        }
+
+        function aseno(){
+            x = Math.asin(x);
+            pantalla.innerHTML=x; //arcoSeno 
+        }
+
+        function acoseno(){
+            x = Math.acos(x);
+            pantalla.innerHTML=x; //arcoCoseno
+        }
+        function atan(){
+            x = Math.atan(x); 
+            pantalla.innerHTML=x; //arcotangente 
+        }
+         
+        function numeroE(){
+            x = Math.E;
+            pantalla.innerHTML=x; //constante e   2.718281828459045
+        }
+        
+        function cuadrado(){
+            x = x*x;
+            pantalla.innerHTML=x;
+
+        }
+        function elevado3(){
+            x = x*x*x;
+            pantalla.innerHTML=x;
+        }
+
+        function raiz3(){
+            x = Math.cbrt(x);
+            pantalla.innerHTML=x;
+        }
