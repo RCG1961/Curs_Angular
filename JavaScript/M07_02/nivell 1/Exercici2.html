@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+      <title> Exercici 2 </title>
+</head>
+<body>
+      <script>
+        let nom='ALEJ3ANDRO';
+        let lletres=[];
+        for(let i=0;i<nom.length;i++){
+            lletres.push(nom[i]);
+           switch (lletres[i]){
+               case 'A': case 'E': case 'I': case 'O': case 'U':
+               console.log('He trobat la VOCAL: '+lletres[i]);
+               break;
+               case '1': case '2': case '3':case '4': case '5': case '6':case '7': case '8': case '9':case '0':
+               console.log('els noms de persones no contenen el número: '+lletres[i]);
+               break;
+               default:
+               console.log('He trobat la CONSONANT: '+lletres[i]);
+           }
+        
+        }   
+      </script>
+</body>
+
+</html>   

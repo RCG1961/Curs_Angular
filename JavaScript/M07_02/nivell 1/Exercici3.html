@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+      <title> Exercici 3 </title>
+</head>
+<body>
+      <script>
+        let nom='ALEJANDRO';
+        let lletres=[];
+        for(let i=0;i<nom.length;i++){             //Creacio de l'array
+            lletres.push(nom[i]);
+         }
+        var repetidos = {};
+        lletres.map(function(letra){
+          repetidos[letra] = (repetidos[letra] || 0) + 1;
+          });
+        console.log(repetidos);
+      </script>
+</body>
+
+</html>   
+
