@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Nivell 3</title> 
+</head>
+<body>
+<div><center><br><br><br>
+ <p><h2>NIVELL 3</h2></p>   
+    <br><br><br>
+<p>   
+    <input type="button"  value="Exercici 1" onclick="ej1()" />
+    <input type="button"  value="Exercici 2" onclick="ej2()" /> 
+    <input type="button"  value="Exercici 3" onclick="ej3()" />
+    <input type="button"  value="Exercici 4" onclick="ej4()" />
+    <input type="button"  value="NIVELL 2" onclick="nivell2()" />
+</p>
+</center>></div>
+  <script>
+    function ej1(){
+        let nom='ALEJ3ANDRO';
+        let lletres=[];
+        for(let i=0;i<nom.length;i++){
+           lletres.push(nom[i]);
+           console.log(lletres[i]);
+        }  
+    }
+
+    function ej2(){
+        let nom='ALEJ3ANDRO';
+        let lletres=[];
+        for(let i=0;i<nom.length;i++){
+            lletres.push(nom[i]);
+           switch (lletres[i]){
+               case 'A': case 'E': case 'I': case 'O': case 'U':
+               console.log('He trobat la VOCAL: '+lletres[i]);
+               break;
+               case '1': case '2': case '3':case '4': case '5': case '6':case '7': case '8': case '9':case '0':
+               console.log('els noms de persones no contenen el número: '+lletres[i]);
+               break;
+               default:
+               console.log('He trobat la CONSONANT: '+lletres[i]);
+           }
+        
+        } 
+    }
+
+    function ej3(){
+        let nom='ALEJANDRO';
+        let lletres=[];
+        for(let i=0;i<nom.length;i++){             //Creacio de l'array
+            lletres.push(nom[i]);
+         }
+        var repetidos = {};
+        lletres.map(function(letra){
+          repetidos[letra] = (repetidos[letra] || 0) + 1;
+          });
+        console.log(repetidos);
+    }
+
+    function ej4(){
+        let nom='ALEJANDRO';
+        let cognom='SANZ';
+        let name=[];
+        let surname=[];
+        let fullName=[];
+        for(let i=0;i<nom.length;i++){             //Creacio de l'array 1
+            name.push(nom[i]);
+        }
+        for(let i=0;i<cognom.length;i++){          //Creacio de l'array 2
+            surname.push(cognom[i]);
+        }
+        fullName = name.concat(' ',surname);
+        console.log(fullName);
+    }
+    
+    function nivell2(){
+        var str = 'Una dirección de correo electrónico es la dirección que utiliza para recibir y enviar correos electrónicos. Se muestra a los destinatarios de sus correos electrónicos para que sepan quién le envió un correo electrónico. Cada dirección de correo electrónico sólo se puede asignar una vez en todo el mundo y, por lo tanto, está disponible exclusivamente para usted. No puede cambiar las direcciones de correo electrónico, pero puede eliminarlas en cualquier momento. Una dirección de correo electrónico consiste en el signo @ (arroba), el nombre de usuario delante y el dominio detrás, por ejemplo, nombre-de-usuario@ionos.es : La parte del dominio depende del dominio bajo el cual se crea la dirección de correo electrónico: en nuestro ejemplo es ionos.es. Esta información varía de proveedor a proveedor, por lo que una parte del dominio también puede ser gmail.com o gmx.es si utiliza una dirección de correo electrónico de estos proveedores. Si ha registrado su propio dominio, por ejemplo, www.el-nombre-de-sus-sueños.es, las direcciones de correo electrónico que configura para el dominio lo tienen como parte del dominio (nombre-de-usuario@el-nombre-de-sus-sueños.es o nombre-de-usuario@el-nombre-de-sus-sueños.ES ). El nombre de usuario es la parte de una dirección de correo electrónico que puede seleccionar libremente en la medida de lo posible. Puede, por ejemplo, utilizar su propio nombre o el nombre o departamento de una empresa. Si utiliza una dirección de correo electrónico con un proveedor de correo como gmail.com o gmx.es, es posible que la combinación con la parte del dominio deseada ya esté registrada. En este caso, deberá considerar alternativas para el nombre de usuario de su dirección de correo electrónico. Si utiliza su propio dominio, estas restricciones no se aplican porque sólo usted puede crear direcciones de correo electrónico que coincidan con su propio dominio. En resumen, nombre-de-usuario@ionos.es es un email'; 
+        busqueda =  /\S+@\S+\.\S+/g;    //funciona (amb repeticions)
+        var sortida = str.match(busqueda);
+        console.log(sortida);
+                                      //filtrar la secuencia repetida
+        const dataArr = new Set(sortida);   //El objeto global Set es una estructura de datos, una colección de valores que permite sólo almacenar valores únicos de cualquier tipo, incluso valores primitivos u referencias a objetos.
+        let result = [...dataArr];
+        console.log(result);
+    }
+    
+  </script>
+</body>
+</html>
