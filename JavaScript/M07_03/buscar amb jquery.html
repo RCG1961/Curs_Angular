@@ -1,0 +1,66 @@
+<html>
+<head>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <!-- librerias de jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+    <style>
+        label {
+            margin-bottom: 0.1em;
+            margin-top: 0.5em;
+        }
+    </style>
+</head>
+
+<body class="bg-info">
+
+    <!-- FORM -->
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-6 p-5 bg-white shadow-lg rounded">
+                
+                <form id="test-form" action="" method="post">
+                    <h2>BUSCAR</h2>
+                    <hr>
+                    <div class="form-group">
+                        <label for="username">Secuencia a buscar:</label>
+                        <input name="name" id="name" type="text" class="form-control" placeholder="Cadena de carácteres (max.20)">
+                    </div>
+                   
+                    <input type="submit" class="btn btn-primary btn-block mt-5" value="Buscar">
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+   
+
+   
+
+    <!-- validació amb jquery  funcion validate-->
+    <script>
+    $(document).ready(function() {
+        $("#test-form").validate({
+          rules: {
+            name : {
+              required: true,
+              minlength: 3,
+              maxlength: 20
+            }
+          },   
+          messages : {
+            name: {
+              minlength: "Longitud mínima de 3 caracteres",
+              maxlength:  "Te has pasado de 20 caracteres"                      
+            } 
+          }    
+        });
+    });
+
+    </script>
+
+</body>
+</html>
+

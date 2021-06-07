@@ -1,0 +1,91 @@
+<html>
+<head>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  
+    <!-- popper -->
+   
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    
+    
+    <!-- librerias de jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        label {
+            margin-bottom: 0.1em;
+            margin-top: 0.5em;
+        }
+    </style>
+</head>
+
+<body class="bg-info">
+<form id="basic-form" action="" method="post">
+    <p>
+      <label for="name">Name <span>(required, at least 3 characters)</span></label>
+      <input id="name" name="name" minlength="3" type="text" required>
+    </p>
+    <p>
+      <label for="email">E-Mail <span>(required)</span></label>
+      <input id="email" type="email" name="email" required>
+    </p>
+    <p>
+      <input class="submit" type="submit" value="SUBMIT">
+    </p>
+</form>
+<script> 
+     $(document).ready(function() {
+        $("#basic-form").validate({
+          rules: {
+            name : {
+              required: true,
+              minlength: 3
+            },
+            age: {
+              required: true,
+              number: true,
+              min: 18
+            },
+            email: {
+              required: true,
+              email: true
+            },
+            weight: {
+              required: {
+                depends: function(elem) {
+                  return $("#age").val() > 50
+                }
+              },
+              number: true,
+              min: 0
+            }
+          },
+          messages : {
+            name: {
+              minlength: "Name should be at least 3 characters"
+            },
+            age: {
+              required: "Please enter your age",
+              number: "Please enter your age as a numerical value",
+              min: "You must be at least 18 years old"
+            },
+            email: {
+              email: "The email should be in the format: abc@domain.tld"
+            },
+            weight: {
+              required: "People with age over 50 have to enter their weight",
+              number: "Please enter your weight as a numerical value"
+            }
+          }
+        });
+      });
+
+</script>
+
+</body>
+</html>
