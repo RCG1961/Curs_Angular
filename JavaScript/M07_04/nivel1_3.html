@@ -1,0 +1,104 @@
+<html>
+<head>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body class="bg-info" onmouseover="fer()"; >
+<table>
+   <tbody>
+    <tr class="meva">
+      <td>
+        <div class="un" id="uno">&#10025</div>
+      </td>
+      <td>
+        <div class="un" id="dos">&#10025</div>
+      </td>
+      <td>
+        <div class="un" id="tres">&#10025</div>
+      </td>
+      <td>
+        <div class="un"id="cuatro">&#10025</div>
+      </td>
+      <td>
+        <div class="un"id="cinco">&#10025</div>
+      </td>
+    </tr>
+   
+  </tbody>
+</table>
+     <script>
+       function fer(){
+        var a = colores((window.getComputedStyle(document.getElementById("uno"),null).color).substr(3));
+        var b = colores((window.getComputedStyle(document.getElementById("dos"),null).color).substr(3));
+        var c = colores((window.getComputedStyle(document.getElementById("tres"),null).color).substr(3));
+        var d = colores((window.getComputedStyle(document.getElementById("cuatro"),null).color).substr(3));
+        var e = colores((window.getComputedStyle(document.getElementById("cinco"),null).color).substr(3));
+         
+         if (a=='#ff0000'){             // es rojo mouseover
+           document.getElementById("dos").style.color='#ffff00';
+         } 
+         
+         if (b=='#ff0000'){             // es rojo mouseover
+           document.getElementById("uno").style.color='#ffff00';
+           document.getElementById("tres").style.color='#ffff00';
+         } 
+         if(c=='#ff0000'){ 
+          document.getElementById("dos").style.color='#ffff00';
+          document.getElementById("cuatro").style.color='#ffff00';
+         } 
+         if (d=='#ff0000'){             // es rojo mouseover
+          document.getElementById("tres").style.color='#ffff00';
+          document.getElementById("cinco").style.color='#ffff00'; 
+         } 
+          if (e=='#ff0000'){             // es rojo mouseover
+            document.getElementById("cuatro").style.color='#ffff00';
+          } 
+          if(a=='#ffff00'){document.getElementById("uno").style.color='';}
+          if(b=='#ffff00'){document.getElementById("dos").style.color='';}
+          if(c=='#ffff00'){document.getElementById("tres").style.color='';}
+          if(d=='#ffff00'){document.getElementById("cuatro").style.color='';}
+          if(e=='#ffff00'){document.getElementById("cinco").style.color='';}
+        
+        } 
+
+                function colores(string){
+           let one=string.substring(1);
+           let cad=[];
+           numero='';
+           for(let i=0;i<one.length;i++){
+              if(one[i]!=',' ){
+                numero+=one[i];
+              }
+              else{
+                 numero=parseInt(numero);
+                 numero=numero.toString(16);
+                 if(numero.length == 1){numero='0'+numero;}
+                 cad.push(numero);
+                 numero='';
+              }
+            } 
+            if(numero.slice(-1)==')'){                //lo borro
+                 numero=numero.slice(0,-1);
+                 numero=parseInt(numero);
+                 numero=numero.toString(16);
+                 if(numero.length == 1){numero='0'+numero;}
+                 cad.push(numero);
+            }
+            return ("#"+cad[0]+cad[1]+cad[2]);
+         } 
+      
+              
+
+       
+     </script>
+</body>
+</html>
