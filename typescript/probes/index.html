@@ -1,0 +1,80 @@
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">    
+<script src="../models/car.js"></script>
+<script src="../models/wheel.js"></script>
+<script src="../controllers/controller.js"></script>
+<style>
+  ::-webkit-input-placeholder { color: red; font-style: italic; } 
+  
+</style>
+</head>
+<!--<body>
+    <p id="carInfo"></p>
+    <button onclick="createCar('1212SDS','SEAT','ROJO')">Create car</button>
+
+-->   
+<body class="m-0 vh-100 row justify-content-center align-items-center"  >
+   
+    <div class="col-auto bg-warning p-5 text-center">
+        <form id="basic-form" action="validar.php" method="post">
+            <p>
+              <label for="matricula">MATRICULA <span>(obligatorio)</span></label>
+              <input id="matricula" name="modelo" placeholder="matricula" type="text"  minlength="6" required>
+            </p>
+            <p>
+              <label for="marca">MARCA  <span>(obligatorio)</span></label>
+              <input id="marca" type="text"  placeholder="marca" name="marca" minlength="3" required>
+            </p>
+            <p>
+                <label for="color">COLOR  <span>(obligatorio)</span></label>
+                <input id="color" type="text"  placeholder="color" name="color" minlength="2" required>
+              </p>
+            <p>
+                <button class="submit"  type="submit"  onclick="Crear()";>Create car</button>
+            </p>
+        </form>
+    </div> 
+    
+    
+
+    
+        <script> 
+               function validar(){ 
+                $(document).ready(function() {
+                    $("#basic-form").validate({
+                      rules: {
+                        matricula : {
+                          required: true,
+                          minlength: 6
+                        },
+                        marca : {
+                            required: true,
+                            minlength: 3
+                          },
+                        color :  {
+                            required: true,
+                            minlength: 2
+                          }                      
+                      }
+                  });
+                });
+               }
+
+              function Crear(){ 
+                  validar();
+                  let mod = (document.getElementById("matricula").value).toUpperCase();
+                  let mar = (document.getElementById("marca").value).toUpperCase();
+                  let coler =(document.getElementById("color").value).toUpperCase();
+                  createCar(mod,mar,coler);
+              }  
+        </script>
+  
+</body>
+</html>

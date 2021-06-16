@@ -1,0 +1,88 @@
+<html>
+<head>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  
+    <!-- popper -->
+   
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    
+    
+    <!-- librerias de jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+      ::-webkit-input-placeholder { color: red; font-style: italic; }
+        label {
+            margin-bottom: 0.1em;
+            margin-top: 0.5em;
+        }
+        document.messages{
+          font-size: 10px;
+        }
+    </style>
+   
+</head>
+
+<body class="bg-info">
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-6 p-5 bg-white shadow-lg rounded">
+<form id="formulario" target="_blank" action="" name="formulario" >
+    <p>
+      <label for="matricula">Matricula .........<span></span></label>
+      <input id="matricula" name="matricula" minlength="7" type="text" required placeholder="Matricula" >
+      <span class="errorMatricula" id="errorMatricula"></span>
+    </p>
+    <p>
+      <label for="marca">Marca ............... <span></span></label>
+      <input id="marca" type="text" name="marca" required placeholder="Marca">
+      <span class="errorMarca" id="errorMarca"></span> 
+    </p>
+    <p>
+        <label for="color">Color ................<span></span></label>
+        <input id="color" type="text" name="color" required placeholder="Color">
+        <span class="errorColor" id="errorColor"></span>
+    </p>    
+    <p>
+      <input class="submit" type="button" value="Crear Coche" >
+    </p>
+</form>
+
+</div>
+</div>
+</div>
+<script>
+    window.addEventListener("load",function(){
+        document.formulario.addEventListener("submit",validarFormulario);
+        window.formulario.nombre.addEventListener("input",function(){
+            alert('entra')
+            document.getElementById("errorMatricula").innerHTML= "";
+            document.getElementById("errorMarca").innerHTML= "";
+            document.getElementById("errorModelo").innerHTML= ""; 
+            alert('aqui entra')
+        })
+    
+    });		
+    
+    function validarFormulario(e){
+        e = e || window.event;
+        if(window.formulario.matricula.value==""){ //} && length.window.formulario.matricula.value==7){
+            e.preventDefault();
+            document.getElementById("errorMatricula").innerHTML= "Debes rellenar el campo con 7 caracteres";
+            document.getElementById("errorMatricula").setAttribute("style","color:red;");
+        }else{
+            //podríamos escribir si quisiéramos document.formulario.submit() y forzaríamos el envío pero es innecesario porqué se hará igualmente.
+                    console.log(window.formulario.matricula.value);
+        }
+       
+    }
+</script>
+</body>
+</html>

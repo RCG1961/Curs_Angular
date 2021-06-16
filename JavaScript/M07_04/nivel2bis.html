@@ -12,9 +12,9 @@
     
 </head>
 
-<body class="m-0 vh-100 row justify-content-center align-items-center" ;  onmouseover="fixe()"; >
+<body class="m-0 vh-100 row justify-content-center align-items-center"  onmouseover="fixe()" ; onclick="netejar()">
    
-  <div class="col-auto bg-danger p-5 text-center">
+  <div class="col-auto bg-danger p-5 text-center" >
 <table>
    <tbody>
     <tr class="meva">
@@ -76,16 +76,8 @@
            document.getElementById("cuatro").style.color='#ff0000';
            document.getElementById("cinco").style.color='#ff0000';
         } 
-         if(a=='#ff0000'){document.getElementById("uno").style.color='';}
-         if(b=='#ff0000'){document.getElementById("dos").style.color='';}
-         if(c=='#ff0000'){document.getElementById("tres").style.color='';}
-         if(d=='#ff0000'){document.getElementById("cuatro").style.color='';}
-         if(e=='#ff0000'){document.getElementById("cinco").style.color='';}
-         console.log('color 1 '+a);
-         console.log('color 2 '+b);
-         console.log('color 3 '+c);
-         console.log('color 4 '+d);
-         console.log('color 5 '+e);
+         color_normal(a,b,c,d,e);
+         
        }
        else { 
         var evento = evento || window.event;
@@ -93,8 +85,9 @@
           case 'mouseover':
             console.log('evento mouseover')
             this.onmouseover=null; 
-            this.onmouseover.disabled =true;
+            
             break;
+         
            }
          }
         }  
@@ -164,17 +157,46 @@
            else{                                      //Pantalla activa un altre cop
              estat=true;
              document.getElementById("mensaje").innerHTML = "CLICK Desbloquea";
-             document.getElementById("uno").style.color='';
-             document.getElementById("dos").style.color='';
-             document.getElementById("tres").style.color='';
-             document.getElementById("cuatro").style.color='';
-             document.getElementById("cinco").style.color=''; 
+             color_normal(a,b,c,d,e);
+              $(document).ready(function(){
+                $(".fora").click(function () {
+                  alert("has hecho click en la capa div");
+                  }
+                );
+              });
              setTimeout(function(){ document.getElementById("mensaje").innerHTML =''; }, 2000);
              
            }
          }
+      function color_normal(a,b,c,d,e){
+         if(a=='#ff0000'){document.getElementById("uno").style.color='';}
+         if(b=='#ff0000'){document.getElementById("dos").style.color='';}
+         if(c=='#ff0000'){document.getElementById("tres").style.color='';}
+         if(d=='#ff0000'){document.getElementById("cuatro").style.color='';}
+         if(e=='#ff0000'){document.getElementById("cinco").style.color='';}
          
-                
+      }
+      function netejar(){ 
+        console.log('soc')
+        $(document).ready(function(){
+          
+           $(".un").click(function () {
+           console.log("has hecho click en la capa div");
+           }
+           );
+         });
+
+        //if(click==2){
+        //  alert('entra')
+        //  document.getElementById("uno").style.color='';
+        //  document.getElementById("dos").style.color='';
+        //  document.getElementById("tres").style.color='';
+        //  document.getElementById("cuatro").style.color='';
+        //  document.getElementById("cinco").style.color='';
+        //  estat=true;
+        //}
+      }
+             
         
        
      </script>
