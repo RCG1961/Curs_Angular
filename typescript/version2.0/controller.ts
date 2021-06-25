@@ -11,8 +11,7 @@ function createCar(plate:string,brand:string,color:string){
 }
 
 window.addEventListener("load",function(){
-
-   document.formulario.addEventListener("submit",validarFormulario);
+  document.formulario.addEventListener("submit",validarFormulario);
     (<HTMLSelectElement>document.getElementById("errorMatricula")).innerHTML= "";
 });
 
