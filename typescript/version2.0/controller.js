@@ -6,14 +6,14 @@ function createCar(plate, brand, color) {
     // car.addWheel(new Wheel(4,brand));
 }
 window.addEventListener("load", function () {
-    var form_car = document.querySelector('.formulario');
-    form_car.addEventListener("submit", validarFormulario);
+    //const form_car = document.querySelector('.formulario') as HTMLFormElement;
+    document.formulario.addEventListener("submit", validarFormulario);
     document.getElementById("errorMatricula").innerHTML = "";
 });
 function validarFormulario(e) {
     e = e || window.event;
-    var form_car = document.querySelector('.formulario');
-    var expresion = form_car.matricula.value.toUpperCase();
+    //const form_car = document.querySelector('.formulario') as HTMLFormElement;
+    var expresion = window.formulario.matricula.value.toUpperCase();
     var regular = /^[0-9]{4}[A-Z]{3}/; //formato matricula 4 numeros y 3 letras
     if (!regular.test(expresion)) {
         e.preventDefault();
