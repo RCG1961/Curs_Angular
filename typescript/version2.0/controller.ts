@@ -16,8 +16,8 @@ window.addEventListener("load",function(){
 function validarFormulario(e:Event){
         
     e = e || window.event;   
-    //const form_car2 = window.querySelector('.formulario') as HTMLFormElement;
-    let expresion:string = window.formulario.matricula.value.toUpperCase();
+    const form_car = document.querySelector('.formulario') as HTMLFormElement;
+    let expresion:string = form_car.matricula.value.toUpperCase();
    
     var regular:any = /^[0-9]{4}[A-Z]{3}/;                 //formato matricula 4 numeros y 3 letras
     if(!regular.test(expresion)){
