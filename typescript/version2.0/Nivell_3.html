@@ -195,10 +195,7 @@
         }
       }
        
-      function validarFormulario2(e){
-        e = e || window.event;  
-        alert('fase3')
-      }
+      
 
       function Rodes(){
         
@@ -230,7 +227,8 @@
               }
               else{
               document.getElementById("uno").innerHTML='Rueda 1 fabricante:'+x1+'   Diámetro: '+y1+'         Rueda 2 fabricante:'+x2+'   Diámetro: '+y2;
-              document.getElementById(" dos").innerHTML='Rueda 3 fabricante:'+x3+'   Diámetro: '+y3+'         Rueda 2 fabricante:'+x4+'   Diámetro: '+y4;
+              document.getElementById("dos").innerHTML='Rueda 3 fabricante:'+x3+'   Diámetro: '+y3+'         Rueda 2 fabricante:'+x4+'   Diámetro: '+y4;
+               alert();
               addrueda(y1,x1);
               addrueda(y2,x2);
               addrueda(y3,x3);
