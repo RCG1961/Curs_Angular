@@ -1,0 +1,46 @@
+body{
+    background-color:rgb(213, 198, 228);
+}
+
+h1{
+    padding:0.5em;
+    align-items: center;
+    text-align: center;
+    color: rgb(240, 20, 20);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.form-label{
+  color: rgb(60, 9, 156);
+  padding: 10px;
+}
+.form_coches {
+    display: block;
+}
+
+.form_ruedas {
+    display: none;
+}
+
+.card_descripcion {
+    display: none;
+}
+.repetimos{
+   visibility: hidden;
+   display:none;
+}
+
+.boton{
+  width: 200px;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 3px solid hsl(22, 100%, 50%);
+  cursor: pointer;
+}
+
+form-group {
+    margin-right: 0.5rem;
+}
+

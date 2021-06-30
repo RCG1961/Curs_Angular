@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+    crossorigin="anonymous"></script>
+    <title>TypeScript</title>
+</head>
+
+<body>
+    <section class="container">
+        <h1>Ejercicio Vehículos en TYPESCRIPT</h1>
+
+        <!-- COCHE -->
+        <form class="form form_coches" id="form_coches">
+            <div class="row justify-content-between">
+                <div class="form-group col-md-3">
+                    <label for="matricula" class="form-label">MATRÍCULA</label>
+                    <input type="text" class="form-control" id="matricula" aria-describedby="matricula" maxlength="7" required>
+                    <p id="validarM"></p>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="marca" class="form-label">MARCA</label>
+                    <input type="text" class="form-control" id="marca" required>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="color" class="form-label">COLOR</label>
+                    <input type="text" class="form-control" id="color" required>
+                </div>
+            </div>
+            <div class="form-row d-flex my-4">
+                <p id="carInfo"></p>
+                <button class="boton" type="submit" class="btn btn-primary btn-car my-2" onclick="">Crear Coche</button>
+               
+            </div>
+        </form>
+
+        <!-- RUEDAS -->
+        <form class="form form_ruedas" id="form_ruedas">
+            <div class="form-row d-flex">
+                <div class="form-group col-md-3">
+                    <label for="r1" class="form-label">Marca Rueda 1</label>
+                    <input type="text" class="form-control rueda" id="r1" required>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="d1" class="form-label">Diámetro Rueda 1</label>
+                    <input type="number" range min=0.4 max=2 step=0.01 class="form-control" id="d1" required>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="r2" class="form-label">Marca Rueda 2</label>
+                    <input type="text" class="form-control rueda" id="r2" required>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="d2" class="form-label">Diámetro Rueda 2</label>
+                    <input type="number" range min=0.4 max=2 step=0.01 class="form-control" id="d2" required>
+                </div>
+            </div>
+            <div class="form-row d-flex mt-2">
+                <div class="form-group col-md-3">
+                    <label for="r3" class="form-label">Marca Rueda 3</label>
+                    <input type="text" class="form-control rueda" id="r3" required>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="d3" class="form-label">Diámetro Rueda 3</label>
+                    <input type="number" range min=0.4 max=2 step=0.01 class="form-control" id="d3" required>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="r4" class="form-label">Marca Rueda 4</label>
+                    <input type="text" class="form-control rueda" id="r4" required>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="d4" class="form-label">Diámetro Rueda 4</label>
+                    <input type="number" range min=0.4 max=2 step=0.01 class="form-control" id="d4" required>
+                </div>
+            </div>
+            <div class="form-row d-flex my-2">
+                <p id="wheelsInfo"></p>
+                <button class="boton" type="submit" class="btn btn-primary btn-wheels my-2" onclick="">Añadir Ruedas</button>
+            </div>
+        </form>
+
+        <!-- CAR CARDS -->
+        <section class="container px-0 my-3 card_descripcion" id="card_descripcion">
+            <div class="card rounded">
+                <div class="card-header">
+                    <h4 class="card-title" id="titleCard"></h4>
+                    <h6 class="card-subtitle mb-2 text-muted" id="brandColorCard"></h6>
+                </div>
+                <div class="card-body row">
+                    <h5 class="card-title" id="wheelsTitleCard"></h5>
+                    <div class="col-3" id="detailBrandCard">
+                        <p class="card-text" id="roda_1"></p>
+                        <p class="card-text" id="roda_2"></p>
+                        <p class="card-text" id="roda_3"></p>
+                        <p class="card-text" id="roda_4"></p>
+                     </div>
+                    
+                    <div class="col-3" id="detailDiamCard">
+                        <p class="card-text" id="Diam_1"></p>
+                        <p class="card-text" id="Diam_2"></p>
+                        <p class="card-text" id="Diam_3"></p>
+                        <p class="card-text" id="Diam_4"></p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section>
+        <div  id="repetimos">
+        <button class="boton" id="repe" style="display:none" type="submit" class="btn btn-warning btn-car my-2" onclick="Repetir();">OTRO COCHE</button>
+        </div>
+        </section>
+    </section>
+
+    <!-- Scripts -->
+    <script src="car.js"></script>
+    <script src="wheel.js"></script>
+    <script src="control.js"></script>
+   <!-- Custom CSS -->
+   <link rel="stylesheet" href="style.css">
+</body>
+
+</html>
