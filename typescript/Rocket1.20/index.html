@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Carreras de Cohetes</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="container">
+
+  <div class="text-center" style="margin-bottom:0;">
+    <h1>TypeScript Rockets 1.20</h1>
+  </div>
+
+    <div class="text-center" style="margin-bottom:200em;"> 
+    <h2>CARRERA DE COHETES</h2>
+    <div class="row justify-content-between">
+                                               <!--Rocket 1-->
+      <div class="form-row d-flex my-8">
+        <div id="formCarId">
+          <div class="form-group">
+            <label class="cohet" id="R1">Rocket 1</label><br>
+            <p id="cohete1"></p>
+          </div>
+          <p>
+            <button class="btn btn-danger" id="crear1" onclick="createRocket1()">CREAR</button>
+            <button id="acelerador1" class="btn btn-outline-danger" onclick="rocket1.accelerate(rocket1)">ACELERAR</button>
+            <button id="reducir1" class="btn btn-outline-danger" onclick="rocket1.breakRocket(rocket1)">FRENAR</button>
+            <button id="stop1" class="btn btn-outline-danger" onclick="rocket1.stop(rocket1)">PARAR</button>
+            <div id="rocket1Info"> </div>
+          </p>
+        </div>
+      </div>
+                                               <!--Rocket 2-->
+      <div class="form-row d-flex my-8"></div>
+        <div id="formRocketId">
+          <div class="form-group">
+            <label class="cohet" id="R2">Rocket 2</label><br>
+            <p id="cohete2"></p>
+          </div>
+          <p>
+            <button class="btn btn-info" id="crear2" onclick="createRocket2()">CREAR</button>
+            <button id="acelerador2" class="btn btn-outline-info" onclick="rocket2.accelerate(rocket2)">ACELERAR</button>
+            <button id="reducir2" class="btn btn-outline-info" onclick="rocket2.breakRocket(rocket2)">FRENAR</button>
+            <button id="stop2" class="btn btn-outline-info" onclick="rocket2.stop(rocket2)">PARAR</button>
+            <div id="rocket2Info"> </div>
+          </p>
+        </div>
+    </div>
+                                                   <!-- SACAR COHETES POR LA PANTALLA-->
+    <div id="infoRocket1">
+      <span style=" color:red";>
+        <p id="rocketId1" class="fas fa-space-shuttle fa-4x d-none" ></p>
+      </span>
+    </div>
+    <div class="infoRocket1">
+      <span style=" color:blue;">
+        <p id="rocketId2" class="fas fa-space-shuttle fa-4x d-none"></p>
+      </span>
+    </div>
+    <audio id="winer" src="sonido.mp3"></audio>
+    <h3><div id="cursa"></div></h3>
+  </div>
+  <h3><div id="footer">aaa</div></h3>
+ <script src="control.js"></script> 
+ <script src="potencia.js"></script>
+ <script src="cohete.js"></script>
+
+</body>
+
+</html>
