@@ -67,7 +67,7 @@ class Rocket {
                 this.speedRocket -= 10;
             }
             else {
-                console.log(kw_Propulsor.PropulsorId + ", " + kw_Propulsor.PropulsorActive + "is the minimum thrust");
+                console.log(kw_Propulsor.PropulsorId + ", " + kw_Propulsor.PropulsorActive + "es la mínima potencia");
               
             }
             (rocket1) ? showRocket1Info() : false;
@@ -130,7 +130,7 @@ class Rocket {
         } else {
             var id = setInterval(frame, 1);
         }
-        //this function is necessary to make work the animation asynchronous of the two rockets.
+        //Esta funcion es necesaria para la animacion asincronica de los dos cohetes.
         function frame():void {
             var elem1 = <HTMLElement>document.getElementById("rocketId1");
             var elem2 = <HTMLElement>document.getElementById("rocketId2");
@@ -138,7 +138,7 @@ class Rocket {
             var musica = <HTMLElement>document.getElementById('winer');
             
 
-            if (_this.position >= screen.width ) {
+            if (_this.position >= screen.width ) {                            //screen.width definimos por donde se moverá
                 _this.position = 0;                
                 _this.launchRocket = false;
 

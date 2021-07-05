@@ -112,7 +112,7 @@ function showRocket1Info():void {
                 
     let potmax1:number = 0;
     for(let i=0;i<(rocket1.PropulsoresArray.length);i++){potmax1 += rocket1.PropulsoresArray[i].PropulsorPower;}
-    let vel_max1:number =(potmax1*155);
+    let vel_max1:number =(potmax1*155);               //innecesario es para darle una velocidad correcta al cohete
     rocket1Info.style.borderColor="red";
     rocket1Info.innerHTML = "Cohete código: " + rocket1.rocketId +
         "<br>Número de propulsores " + rocket1.numPropulsores +
