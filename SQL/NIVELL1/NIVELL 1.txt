@@ -1,0 +1,15 @@
+Planes
+-----------
+id_plane  (11) INT      PRIMARY UNIC
+capacity  (3)  INT 
+model     (25  VARCHAR
+
+SEATS
+id_seat   (11) INT    PRIMARY UNIC
+plane_id  (11) int    INDEXED
+
+RELACIONAT id_plane amb plane_id
+CONSULTA SQL PER SABEN EL NUMERO DE SEIENT DE CADA APARELL
+
+SELECT planes.model, planes.capacity, COUNT(*) FROM planes,seats WHERE planes.id_plane=seats.plane_id GROUP BY planes.model
+

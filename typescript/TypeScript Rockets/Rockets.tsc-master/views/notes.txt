@@ -1,0 +1,34 @@
+
+
+style="position:relative; right: 0px; width:1%"
+
+
+// here the break of the rocket is working...thanks to increment pos with the speed
+
+moveRocket1(speedRocket1:number){
+      
+  
+            var elem = <HTMLElement>document.getElementById("rocketId1"); 
+            var pos:number = (rocket1.launchRocket)? pos = rocket1.position : pos = 0;
+            let speed = speedRocket1/1000;
+           var id:number;
+            (rocket1.launchRocket)? false : id = setInterval(frame, 1);
+
+            function frame() {
+                    if (pos >= 800 || speed == 0) {
+                        clearInterval(id);
+                        pos = pos;
+                    } else {                       
+                        pos+= speed; 
+                        rocket1.position = pos;
+                        elem.style.left =  pos + 'px'; 
+                        speed = speedOfRocket(rocket1) / 1000;
+                    }
+            }       
+            rocket1.launchRocket = true;
+    }
+
+
+      (this == rocket1)? rocketId1.classList.add("accelerate"): false;
+       
+        (this == rocket2)? rocketId2.classList.add("accelerate"): false;

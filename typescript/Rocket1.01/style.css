@@ -1,0 +1,78 @@
+/* Sticky Footer Classes */
+body{
+ background-color:antiquewhite; 
+}
+h2{
+  color:red;
+}
+h1{
+ font-style: inherit; 
+}
+.cohet{
+  color:rgb(24, 168, 36);
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size:  60px;
+}
+
+#cohete1,#cohete2{
+  color:black;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  background-color:coral;
+}
+#rocket2Info,#rocket1Info {
+border: 3px solid antiquewhite;
+  width: auto;
+}  
+
+#rocketId1 {
+  position: fixed ;
+  left:50px;
+  top: 450px;
+  color: red;
+  -ms-text-size-adjust: auto;
+  }
+
+#rocketId2 {
+  position: fixed ;
+  left:50px;
+  top: 550px;
+  color: blue;
+  -ms-text-size-adjust: auto;
+}
+
+  .accelerate {
+    animation: myAccelerator 5s ;
+    animation-delay: 0ms;
+  }
+
+  @-webkit-keyframes myAccelerator {
+    from {border-left:6px solid red }
+    to {border-left:6px solid yellow }
+  }
+  
+  @keyframes myAccelerator {
+    from {border-left:6px solid red }
+    to {border-left:6px solid yellow }
+  }
+
+  .break{
+   
+    animation: myBreak 5s ;
+    animation-delay: 0ms;
+  }
+
+  @-webkit-keyframes myBreak {
+    from {border-left:6px solid black }
+    to {border-left:6px solid lime }
+  }
+  
+  @keyframes myBreak {
+    from {border-left:6px solid black }
+    to {border-left:6px solid lime }
+  }
+
+  .txtspeed{
+    font-size: medium;
+    color:black;
+  }

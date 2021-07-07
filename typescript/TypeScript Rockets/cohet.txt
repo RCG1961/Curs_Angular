@@ -1,0 +1,3 @@
+JavaScript	\u1F680
+HTML Code Decimal	&#128640;
+HTML Code Hexa	&#x1F680;

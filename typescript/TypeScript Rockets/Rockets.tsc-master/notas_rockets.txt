@@ -1,0 +1,31 @@
+
+
+
+
+function speedOfRocket(aRocket: Rocket) {
+    for (var i = 0; i <= aRocket.thrustersArray.length - 1; i++) {
+        aRocket.speedRocket += aRocket.thrustersArray[i].currentThrust;
+        console.log("speed of rocket= " + aRocket.speedRocket);
+    }
+    return aRocket.speedRocket;
+
+}
+
+
+// trying to create an array
+function speedOfRocket(aRocket: Rocket):number {
+    
+    
+    
+    let add = (a:number , b:number) => a + b;
+
+    let sum = aRocket.thrustersArray.map();
+
+    return aRocket.speedRocket;
+
+}
+
+function getCurrentThrustArr(aArr:Rocket){ //create array of currentThrust numbers then sum them up.
+
+    let currentThrustArr = aArr.thrustersArray[2].currentThrust;
+}
