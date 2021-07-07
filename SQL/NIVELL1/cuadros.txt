@@ -1,0 +1,27 @@
+CUADROS
+pictures
+-----------
+id_picture (11) INT      PRIMARY UNIC
+prix       (10)  INT 
+author     (35)  VARCHAR
+
+buyers
+--------
+id_buyer   (11) INT    PRIMARY UNIC
+name       (25) VARCHAR
+lastname   (25) VARCHAR
+dni        (10) VARCHAR
+picture_id (11) INT     INDEXED
+
+RELACIONAT id_pcture amb picture_id
+
+CONSULTA SQL 
+cuadres anonims:
+SELECT pictures.prix, pictures.author FROM pictures WHERE pictures.author='anónimo'
+
+Relacion  de compradores y cuadros.
+
+SELECT pictures.author, pictures.prix, buyers.name, buyers.lastname FROM pictures,buyers WHERE pictures.id_picture=buyers.picture_id GROUP BY buyers.id_buyer
+
+Compradores de cuadros mas caros de una cantidad
+SELECT pictures.author, pictures.prix, buyers.name, buyers.lastname FROM pictures,buyers WHERE pictures.id_picture=buyers.picture_id AND pictures.prix>1400000 GROUP BY buyers.id_buyer
