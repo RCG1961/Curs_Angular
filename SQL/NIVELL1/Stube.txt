@@ -14,13 +14,10 @@ url        VARCHAR(50)
 identificador VARCHAR(40)
 usuari_id  INT(11) Relacionado con id_usuari
 
-CONSULTA SQL 
-cuadres anonims:
-SELECT pictures.prix, pictures.author FROM pictures WHERE pictures.author='anónimo'
+CONSULTA SQL
+listado de usuarios email y titulo de video
+SELECT videos.titulo, usuario.email FROM videos,usuario WHERE videos.usuari_id=usuario.id_usuario
 
-Relacion  de compradores y cuadros.
+CONSULTA CUANTOS VIDEOS SON DE CADA USUARIO
 
-SELECT pictures.author, pictures.prix, buyers.name, buyers.lastname FROM pictures,buyers WHERE pictures.id_picture=buyers.picture_id GROUP BY buyers.id_buyer
-
-Compradores de cuadros mas caros de una cantidad
-SELECT pictures.author, pictures.prix, buyers.name, buyers.lastname FROM pictures,buyers WHERE pictures.id_picture=buyers.picture_id AND pictures.prix>1400000 GROUP BY buyers.id_buyer
+SELECT usuario.id, usuario.email, COUNT(*) FROM videos,usuario WHERE videos.usuari_id=usuario.id_usuario GROUP BY videos.usuari_id

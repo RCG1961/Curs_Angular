@@ -1,0 +1,25 @@
+BOOKS
+books
+--------
+id_book INT(11) PRIMARY
+units   INT (4)
+prix  VARCHAR(4)
+autor_id INT(11)
+
+author
+-------------------
+id_autor INT(11) PRIMARY
+place VARCHAR(60)
+number_book INT(4)
+
+users
+-------
+id_user   INT(11) PRIMARY
+name  VARCHAR(50)
+email    VARCHAR(30)
+password   VARCHAR(12)
+
+facturacio
+--------------
+id_factura INT(11) PRIMARY
+user_id 11 INT(11) 
