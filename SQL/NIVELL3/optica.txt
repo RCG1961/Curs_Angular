@@ -1,0 +1,57 @@
+optica
+
+proveidor
+--------
+id_pro   INT(11)
+nom      VARCHAR(90)
+carrer   VARCHAR(50)
+num      VARCHAR(10)
+pis      VARCHAR(5)
+porta    VARCHAR(5)
+ciutat   VARCHAR(40)
+cpostal  INT(5)
+pais     VARCHAT(12)
+telefon  INT(9)
+fax      INT(9)
+nif      VARCHAR(12)       
+
+monturas
+----------
+id_montura INT(11) PRIMARY
+marca   VARCHAR(25)
+grad1   VARCHAR(15)
+grad2   VARCHAR(15)
+tipus   VARCHAR(10)
+color   VARCHAR(15)
+color_vidre1   VARCHAR(15)
+color_vidre2    VARCHAR(15)
+preu   INT(6)
+
+
+clients
+--------
+id_client INT(11) PRIMARY
+nom      VARCHA(45)
+postal   INT(5)
+telefon  INT(9)
+correu   VARCHAR(40)
+data     date
+recomanat VARCHAR(25)
+
+empleados
+---------------
+id_empleado INT(11) PRIMARY
+nom VARCHAR(45)
+
+ventas
+------------
+id_venta INT(11) PRIMARY
+empleado_id INT(11)
+montura_id INT(11)
+cliente_id INT(11)
+
+SQL 
+listado de todas las ventas ordenadas por nº venta
+SELECT ventas.id_venta, empeados.nom, monturas.marca,proveidor.nom FROM ventas,empeados,monturas,proveidor WHERE ventas.empleado_id=empeados.id_empleado AND ventas.montura_id=monturas.id_montura AND monturas.proveidor_id=proveidor.id_pro GROUP BY ventas.id_venta
+Ventas por empleado
+SELECT empeados.nom,empeados.id_empleado,COUNT(*) FROM ventas,empeados WHERE ventas.empleado_id=empeados.id_empleado GROUP BY empeados.nom

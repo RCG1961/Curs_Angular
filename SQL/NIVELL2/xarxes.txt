@@ -1,0 +1,22 @@
+XARXES
+
+users
+--------
+id_user INT(11) PRIMARY
+nom   VARCHAR (40)
+email  VARCHAR(40)
+password VARCHAT (40)
+
+
+amics
+-----------
+id_amic INT(11) PRIMARY
+id_amic1 INT(11) INDEX
+id_amic2 INT(11) INDEX 
+informacio VARCHAR(50)
+
+Photos
+-------------------
+id_photo INT(11) PRIMARY
+url VARCHAR(160)
+user_id INT(11)
