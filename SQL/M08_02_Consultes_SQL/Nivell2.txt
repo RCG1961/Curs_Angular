@@ -1,0 +1,7 @@
+Exercici 7
+
+Companyies amb el seu retard promig només d’aquelles les quals els seus vols arriben al seu destí amb un retràs promig major de 10 minuts.
+
+SELECT flights.UniqueCarrier,AVG(flights.ArrDelay) FROM flights  GROUP BY flights.UniqueCarrier HAVING AVG(flights.ArrDelay) > 10 ORDER BY AVG(flights.ArrDelay)  DESC 
+
+---------------------------------------------------------------

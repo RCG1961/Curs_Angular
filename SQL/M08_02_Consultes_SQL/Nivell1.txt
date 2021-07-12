@@ -1,0 +1,39 @@
+Exercici 1
+Quantitat de registres de la taula de vols:
+
+SELECT count(*) as "Total" FROM `flights` WHERE 1;
+--------------------------------------------------------------------------------
+
+Exercici 2
+Retard promig de sortida i arribada segons l’aeroport origen.
+
+SELECT flights.Origin  as "Origin",AVG(flights.ArrDelay) as "prom_arribades",AVG(flights.DepDelay) as "prom_sortides" FROM flights GROUP by flights.Origin
+--------------------------------------------------------------------------------
+
+Exercici 3
+Retard promig d’arribada dels vols, per mesos, anys i segons l’aeroport origen. 
+A més, volen que els resultat es mostrin de la següent forma (fixa’t en l’ordre de les files):
+
+SELECT flights.Origin,flights.colYear,flights.colMonth,AVG(flights.ArrDelay) as "promedi_arrivades" FROM flights GROUP BY flights.Origin,flights.colYear,flights.colMonth
+--------------------------------------------------------------------------------
+
+Exercici 4
+Retard promig d’arribada dels vols, per mesos, anys i segons l’aeroport origen (mateixa consulta que abans i amb el mateix ordre). 
+Però a més, ara volen que en comptes del codi de l’aeroport es mostri el nom de la ciutat.
+
+SELECT usairports.City,flights.colYear,flights.colMonth,AVG(flights.ArrDelay) as "promedi_arrivades" FROM flights,usairports WHERE flights.Origin=usairports.IATA GROUP BY flights.Origin,flights.colYear,flights.colMonth
+--------------------------------------------------------------------------------
+
+Exercici 5
+Les companyies amb més vols cancel·lats, per mesos i any. 
+A més, han d'estar ordenades de forma que les companyies amb més cancel·lacions apareguin les primeres. 
+Les companyies sense vols cancel·lats no hauran d'aparèixer.
+
+SELECT flights.UniqueCarrier,flights.colYear,flights.colMonth,SUM(flights.Cancelled) FROM flights WHERE flights.Cancelled>0 GROUP BY flights.UniqueCarrier,flights.colYear,flights.colMonth ORDER BY SUM(flights.Cancelled) DESC
+--------------------------------------------------------------------------------
+
+Exercici 6
+L’identificador dels 10 avions que més distància han recorregut fent vols.
+
+SELECT flights.TailNum,SUM(flights.Distance)FROM flights  WHERE flights.TailNum!="" GROUP BY FlightNum ORDER BY SUM(flights.Distance) DESC LIMIT 10
+
