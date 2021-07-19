@@ -35,6 +35,14 @@ $(document).ready(function () {
             //console.log(data.value.joke)
             $(".alert-primary").css("display", "block");
             $('#chiste').html("Joke de la API"+"<br>"+data.value.joke).html() 
-        });
+      });
+    });
+    $('#jokefetch').click(function (e) { 
+        e.preventDefault();
+        $('#chiste').html('');
+        $(".alert-primary").css("display", "block");
+        fetch('http://api.icndb.com/jokes/random?')
+        .then(response => response.json())
+        .then(data => ($('#chiste').html("Joke amb fetch"+"<br>"+data.value.joke).html()) );
     });    
 });
