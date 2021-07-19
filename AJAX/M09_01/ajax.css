@@ -1,0 +1,11 @@
+button{
+    display:block;
+    margin-left:20%;
+    margin-right:18%;
+}
+
+.alert-primary{
+    position:relative;
+    top:150px;
+    display:none;
+}
