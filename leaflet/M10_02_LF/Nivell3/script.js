@@ -7,7 +7,7 @@ CentrarGPS();
 var tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {}).addTo(map);
 
 //en el clusters almaceno todos los markers
-var markers = L.markerClusterGroup();
+var markers,mymarker = L.markerClusterGroup();
 var data_markers = [];
 
 
@@ -46,7 +46,7 @@ function onMapLoad() {
 
 
 function render_to_map(data_markers,filter){                      //data_markers es una array de maker+kind_food
-	
+	map.removeLayer(mymarker); 	
     data_markers.forEach( point=>{        
 		map.removeLayer(point[0]);                            //borro todo el mapa
 		if(point[1]==filter || filter =="TODOS"){
