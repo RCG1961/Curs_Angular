@@ -1,29 +1,22 @@
  .html,body{
     /* Para que funcione correctamente en Smartphones y Tablets */
-    height:100vh;
-    }        
-body {
-    /* Ruta relativa o completa a la imagen */
-    background-image: url(img/fondo2.jpg);
-    /* Centramos el fondo horizontal y verticalmente */
-    background-position: center center;
-    /* El fonde no se repite */
-    background-repeat: no-repeat;
-    /* Fijamos la imagen a la ventana para que no supere el alto de la ventana */
-    background-attachment: fixed;
-    /* El fonde se re-escala automáticamente */
-    background-size: cover;
-    /* Color de fondo si la imagen no se encuentra o mientras se está cargando */
-    background-color: #FFF;
-    /* Fuente para el texto */
-    text-align: center;
-    color: #000;
-    font-family: "Times New Roman", Times, serif;   
-}
-
-/* Background para ancho máximo de la pantalla física 767*/
-
-   
+   height:100vh;
+     /*width: 100vh;*/
+    }   
+    body{
+      background: url("../img/fondo1.jpg") no-repeat center center fixed;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      background-color: #FFF;
+      text-align: center;
+      color: #000;
+      font-family: "Times New Roman", Times, serif;   
+      }         
 
   #myModal2 .modal-header,#myModal2 .modal-footer,#myModal2 .modal-body{
      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;  

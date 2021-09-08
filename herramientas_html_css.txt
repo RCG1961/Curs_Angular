@@ -1,0 +1,27 @@
+0.- https://www.tutorialesprogramacionya.com/
+1.- https://the-echoplex.net/flexyboxes/
+2.- https://www.htaccessredirect.net/
+3.- http://bouncejs.com/
+4.- https://simplecss.eu/
+4.- https://simplecss.eu/
+6.- https://www.jqueryform.com/
+7.- https://www.layoutit.com/es
+8.- https://www.typescriptlang.org/
+
+https://css-tricks.com/a-complete-guide-to-calc-in-css/
+https://threejs.org/
+
+details
+dialog
+<link rel="preload" href=/componet.js" as="script">
+data-
+js data set
+input tabindex="1" oreden de tabulacion
+display:none o block
+<p hidden> mmmm</p>
+editar texto <p contenteditable>vvvvv<p>
+<picture>
+
+https://threejs.org/
+https://adidaschile20.com/
+https://www.awwwards.com/
