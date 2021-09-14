@@ -1,5 +1,5 @@
 {
-  "name": "angular-calendari",
+  "name": "angular-qr",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -18,10 +18,9 @@
     "@angular/platform-browser": "~12.2.0",
     "@angular/platform-browser-dynamic": "~12.2.0",
     "@angular/router": "~12.2.0",
-    "@fullcalendar/angular": "^5.9.0",
-    "@fullcalendar/daygrid": "^5.9.0",
-    "@fullcalendar/interaction": "^5.9.0",
     "@popperjs/core": "^2.10.1",
+    "angular2-qrcode": "^2.0.3",
+    "angular2-qrscanner": "^1.0.7",
     "bootstrap": "^5.0.0-beta3",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",

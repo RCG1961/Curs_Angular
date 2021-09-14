@@ -1,0 +1,99 @@
+{
+  "_from": "angular2-qrscanner",
+  "_id": "angular2-qrscanner@1.0.7",
+  "_inBundle": false,
+  "_integrity": "sha512-LD9ZHt1x2dgbVzDFsx9LOhROycXyxt7YoAdECF9pzCR52OstlMmqYmHzJTRhAx2VrB0WrBpzvj/000t8QLoc0Q==",
+  "_location": "/angular2-qrscanner",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "angular2-qrscanner",
+    "name": "angular2-qrscanner",
+    "escapedName": "angular2-qrscanner",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/angular2-qrscanner/-/angular2-qrscanner-1.0.7.tgz",
+  "_shasum": "ce44a7bd82d31817d36c83b9584661f66b85026c",
+  "_spec": "angular2-qrscanner",
+  "_where": "d:\\Cibernarium\\copia_proyecto_git\\Curs_Angular\\M12_01\\angular-qr2",
+  "author": {
+    "name": "Christian Görg",
+    "email": "goergc@gmx.de"
+  },
+  "bugs": {
+    "url": "https://github.com/goergch/angular2-qrscanner/issues"
+  },
+  "bundleDependencies": false,
+  "contributors": [
+    {
+      "name": "Mosh Mage",
+      "email": "moshmage@gmail.com",
+      "url": "http://moshmage.gitlab.io"
+    },
+    {
+      "name": "Christian Görg",
+      "email": "goergc@gmx.de",
+      "url": "http://github.com/goergch"
+    }
+  ],
+  "dependencies": {
+    "tslib": "^1.9.0"
+  },
+  "deprecated": false,
+  "description": "QrScanner will scan for a QRCode from your Web-cam and return its string representation by drawing the captured image onto a 2D Canvas and use [@LazarSoft/jsqrcode](https://github.com/LazarSoft/jsqrcode) to check for a valid QRCode every *Xms*",
+  "devDependencies": {
+    "@angular-devkit/build-angular": "~0.8.0",
+    "@angular/cli": "^6.2.3",
+    "@angular/common": "6.1.7",
+    "@angular/compiler": "6.1.7",
+    "@angular/compiler-cli": "6.1.7",
+    "@angular/core": "6.1.7",
+    "@angular/platform-browser": "6.1.7",
+    "@angular/platform-browser-dynamic": "6.1.7",
+    "@angular/platform-server": "6.1.7",
+    "@types/es6-shim": "^0.31.37",
+    "@types/jasmine": "^2.8.8",
+    "@types/jasminewd2": "~2.0.3",
+    "@types/node": "^9.6.31",
+    "@types/selenium-webdriver": "^3.0.10",
+    "codelyzer": "^4.4.4",
+    "core-js": "^2.5.7",
+    "moment": "~>2.19.3",
+    "ng-packagr": "^2.4.5",
+    "rxjs": "^6.3.2",
+    "ssri": "~>5.2.2",
+    "ts-node": "~4.1.0",
+    "tsickle": "^0.26.0",
+    "tslint": "^5.11.0",
+    "typescript": "2.9.2",
+    "zone.js": "^0.8.26"
+  },
+  "es2015": "esm2015/angular2-qrscanner.js",
+  "keywords": [
+    "angular",
+    "angular2",
+    "QRCode",
+    "Scanner"
+  ],
+  "license": "GPL-3.0-or-later",
+  "main": "bundles/angular2-qrscanner.umd.js",
+  "metadata": "angular2-qrscanner.metadata.json",
+  "module": "esm5/angular2-qrscanner.js",
+  "name": "angular2-qrscanner",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "cd dishttps://github.com/goergch/angular2-qrscanner"
+  },
+  "typings": "angular2-qrscanner.d.ts",
+  "version": "1.0.7"
+}

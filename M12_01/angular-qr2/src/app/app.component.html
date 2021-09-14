@@ -1,0 +1,108 @@
+
+<div class="container">
+  <div class="m-0 row justify-content-center">
+    <div class="col-auto  bg-light text-danger p-2 text-center">
+    <h2>QR Code Create & Scanner</h2>
+    </div>
+  </div>
+  <div class="row">
+  <div class="col-sm-6 text-warning" >
+  <h3>Dynamically Update QR Code Values</h3>
+y
+  <div class="text-dark"><strong class="text-muted">QR Code:</strong> {{ qrCodeVal }}</div>
+  <div class="text-dark"><strong class="text-muted">Level:</strong> {{ level }}</div>
+  <div class="text-dark"><strong class="text-muted">Width:</strong> {{ width }}</div>
+  <div class="text-dark"><strong class="text-muted">Background:</strong> {{ background }}</div>
+  <div class="text-dark"><strong class="text-muted">Foreground:</strong> {{ foreground }}</div>
+
+   <div> 
+    <qr-code [value]="qrCodeVal" [size]="width" [level]="level" [background]="background" 
+    [foreground]="foreground"></qr-code>
+  </div>
+ 
+  <h4 class="text-dark">Change QR Code Info</h4>
+  <label>
+    <strong class="text-success">Name string: </strong> <input [(ngModel)]="qrCodeVal" placeholder="name" />
+  </label>
+  
+  <br />
+  <div class="container-flex">
+      <div class="btn-group">
+        <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          Update Code 
+        </button>
+        <ul class="dropdown-menu">
+          <li class="dropdown-item" (click)="updateQrInfo('Ramon Carles')">Ramon Carles</li>
+          <li class="dropdown-item" (click)="updateQrInfo('Albert Corral')">Albert Corral</li>
+          <li class="dropdown-item" (click)="updateQrInfo('Janko Juric')">Janko Juric</li>
+          <li><hr class="dropdown-divider"></li>
+          <li class="dropdown-item" (click)="updateQrInfo('MASTERCLASS')">MASTERCLASS</li>
+        </ul>
+      </div>
+
+
+      <div class="btn-group">
+        <button type="button" class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          Update Width
+        </button>
+        <ul class="dropdown-menu">
+          <li class="dropdown-item" (click)="updateWidth(500)">500</li>
+          <li class="dropdown-item" (click)="updateWidth(400)">400</li>
+          <li class="dropdown-item" (click)="updateWidth(300)">300</li>
+          <li class="dropdown-item" (click)="updateWidth(200)">200</li>
+        </ul>
+      </div>
+
+
+      <div class="btn-group">
+        <button type="button" class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          Update Level
+        </button>
+        <ul class="dropdown-menu">
+          <li class="dropdown-item" (click)="updateLevel('L')">L</li>
+          <li class="dropdown-item" (click)="updateLevel('M')">M</li>
+          <li class="dropdown-item" (click)="updateLevel('Q')">Q</li>
+          <li class="dropdown-item" (click)="updateLevel('H')">H</li>
+        </ul>
+      </div>
+  </div>
+  <br />
+  <div class="container-flex">
+  <strong class="text-success">Update Background</strong>: 
+  <button id="uno" class="btn btn-outline-dark" (click)="updateBackground('white')">White</button>
+  <button id="dos" class="btn btn-outline-warning" (click)="updateBackground('yellow')">Yellow</button>
+  <button class="btn btn-outline-success" (click)="updateBackground('lime')">Lime</button>
+  <button class="btn btn-outline-info" (click)="updateBackground('aqua')">Aqua</button>
+  </div>
+  <br />
+  <div class="container-flex">
+  <strong class="text-success">Update Foreground</strong>: 
+  <button class="btn btn-primary" (click)="updateForeground('blue')">Blue</button>
+  <button class="btn btn-dark" (click)="updateForeground('black')">Black</button>
+  <button class="btn btn-danger" (click)="updateForeground('purple')">Purple</button>
+  <button class="btn btn-success" (click)="updateForeground('fuchsia')">Fuchsia</button>
+  </div>
+  
+</div>
+<div class="col-sm-6 text-warning">
+  <h3>Scanner QR Code Version 2.02</h3>
+   <div class="terminal" [ngSwitch]="selection.value"> 
+    <pre *ngSwitchDefault>ng generate component xyz
+      <div>
+        <qr-scanner
+          [debug]="false"
+          [canvasWidth]="1080"
+          [canvasHeight]="720"
+          [stopAfterScan]="true"
+          [updateTime]="500"> 
+        </qr-scanner>    
+      </div>
+    </pre>
+    <pre *ngSwitchCase="'material'">ng add @angular/material</pre>
+    <pre *ngSwitchCase="'dependency'">ng add _____</pre>
+    <pre *ngSwitchCase="'test'">ng test</pre>
+    <pre *ngSwitchCase="'build'">ng build --prod</pre> 
+</div>
+</div>
+</div>
+</div>
