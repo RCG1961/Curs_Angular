@@ -1,19 +1,18 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app-routing.module';
+import { NgModule } from '@angular/core';
+import { FullCalendarModule } from '@fullcalendar/angular';
+import dayGridPlugin from '@fullcalendar/daygrid';
+import timeGridPlugin from '@fullcalendar/timegrid';
+import listPlugin from '@fullcalendar/list';
+import interactionPlugin from '@fullcalendar/interaction';
 import { AppComponent } from './app.component';
 
-// import calendar + http 
-import { HttpClientModule } from '@angular/common/http';
-import interactionPlugin from '@fullcalendar/interaction';
-import dayGridPlugin from '@fullcalendar/daygrid';
-import { FullCalendarModule } from '@fullcalendar/angular';
-
-
-FullCalendarModule.registerPlugins([ 
-  interactionPlugin,
-  dayGridPlugin
-]);
+FullCalendarModule.registerPlugins([
+  dayGridPlugin,
+  timeGridPlugin,
+  listPlugin,
+  interactionPlugin
+])
 
 @NgModule({
   declarations: [
@@ -21,12 +20,9 @@ FullCalendarModule.registerPlugins([
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    FullCalendarModule,
-    HttpClientModule    
+    FullCalendarModule // import the FullCalendar module! will make the FullCalendar component available
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-
 export class AppModule { }
